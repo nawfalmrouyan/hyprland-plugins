@@ -43,7 +43,7 @@ class COverview {
 
     int    SIDE_LENGTH = 3;
     int    GAP_WIDTH   = 5;
-    CColor BG_COLOR    = CColor{0.1, 0.1, 0.1, 1.0};
+    CHyprColor BG_COLOR    = CHyprColor{0.1, 0.1, 0.1, 1.0};
 
     bool   damageDirty = false;
 

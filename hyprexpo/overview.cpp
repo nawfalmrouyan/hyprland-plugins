@@ -115,7 +115,7 @@ COverview::COverview(PHLWORKSPACE startedOn_, bool swipe_) : startedOn(startedOn
         CRegion fakeDamage{0, 0, INT16_MAX, INT16_MAX};
         g_pHyprRenderer->beginRender(PMONITOR, fakeDamage, RENDER_MODE_FULL_FAKE, nullptr, &image.fb);
 
-        g_pHyprOpenGL->clear(CColor{0, 0, 0, 1.0});
+        g_pHyprOpenGL->clear(CHyprColor{0, 0, 0, 1.0});
 
         const auto PWORKSPACE = g_pCompositor->getWorkspaceByID(image.workspaceID);
 
@@ -243,7 +243,7 @@ void COverview::redrawID(int id, bool forcelowres) {
     CRegion fakeDamage{0, 0, INT16_MAX, INT16_MAX};
     g_pHyprRenderer->beginRender(pMonitor.lock(), fakeDamage, RENDER_MODE_FULL_FAKE, nullptr, &image.fb);
 
-    g_pHyprOpenGL->clear(CColor{0, 0, 0, 1.0});
+    g_pHyprOpenGL->clear(CHyprColor{0, 0, 0, 1.0});
 
     const auto   PWORKSPACE = image.pWorkspace;
 
